@@ -1,9 +1,39 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+//const authController = require("../app/http/authController");
+// const cartController = require("../app/http/customers/cartController");
+const authentication = require("../app/middlewares/userAuthentication");
+// const orderController = require("../app/http/customers/orderController");
+
+//console.log(auth.userAuth);
+router.get("/", (req, res) => {
+  res.render("index");
 });
+
+router.get("/admin", authentication.checkAuthenticated, (req, res) => {
+  res.render("admin");
+});
+
+router.get("/login", authentication.checkNotAuthenticated, (req, res) => {
+  res.render("login");
+});
+router.post("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/login");
+});
+router.get("/register", authentication.checkNotAuthenticated, (req, res) => {
+  res.render("register");
+});
+
+//Customer Routes
+// router.post("/orders", orderController().order);
+// router.get("/order", orderController().index);
+
+// // router.get("*", (req, res) => {
+// //   res.render("404", {
+// //     errorcomment: "Opps, Page Not Found",
+// //   });
+// // });
 
 module.exports = router;
