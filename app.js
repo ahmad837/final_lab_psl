@@ -26,7 +26,7 @@ app.use(
     saveUninitialized: false,
     store: MongoDbStore.create({
       mongoUrl:
-        "mongodb+srv://rehan:rehan@cluster0.qhfay.mongodb.net/shop?retryWrites=true&w=majority",
+        "mongodb+srv://ahmad123:asd@cluster0.3uyuk.mongodb.net/final-psl?retryWrites=true&w=majority",
       collectionName: "sessions",
     }),
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, //24 hours
