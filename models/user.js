@@ -24,14 +24,10 @@ const userScheme = mongoose.Schema(
       type: String,
       required: true,
     },
-    role: {
-      type: String,
-      default: "customer",
-    },
   },
   { timestamps: true }
 );
 
-const UserModel = new mongoose.model("user", userScheme);
+const UserModel = new mongoose.model("User", userScheme);
 
 module.exports = UserModel;
