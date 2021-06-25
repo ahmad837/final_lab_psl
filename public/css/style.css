@@ -5,10 +5,11 @@ body {
   display: flex;
   flex-direction: column;
   /* min-height: 100vh; */
+
 }
 
 .headerTop {
-  background-color: #232f3e;
+  
 
   border-bottom: 1px solid #495159;
 }
@@ -245,7 +246,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #687e71;
+  background: #0d0d0d;
   padding: 0px;
   width: 90%;
   max-width: 450px;
@@ -256,7 +257,7 @@ h2 {
 }
 
 #formFooter {
-  background-color: #232f3e;
+  background-color: black;
   border-top: 1px solid #dce8f1;
   padding: 25px;
   text-align: center;
