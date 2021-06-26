@@ -9,29 +9,24 @@
     <title>Admin Register</title>
   </head>
   <body style="background-image: url(/images/BG.jpg);" >
-    <!--Main-->
-    <a class="underlineHover myRmainText" href="/">Return to hompage</a>
+    {{>topnavbar}}
 
     <div class="wrapper fadeInDown">
       <div id="formContent">
-        <!-- Tabs Titles -->
 
-        <!-- Icon -->
         {{#if messages.error}}
           <span class="registerSpan">{{messages.error}}</span><br>
         {{/if}}
 
-        <div class="fadeIn first">
-          <img class="loginFormImage" src="./images/logo.png" />
-        </div>
-        <h2>Register</h2>
+     
+        <h2>User Register</h2>
 
         <!-- Login Form -->
         <form action="/api/users/register" method="POST">
           <input
             type="name"
             id="email"
-            class="fadeIn second"
+            class=" second"
             name="name"
             placeholder="Name"
             value="{{messages.name}}"
@@ -49,7 +44,7 @@
             id="email"
             class="fadeIn second"
             name="ph_number"
-            placeholder="Ph Number"
+            placeholder="Mobile Number"
             value="{{messages.ph_number}}"
           />
           <input
@@ -71,7 +66,6 @@
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-          <a class="underlineHover" href="#">Forgot Password?</a>
           <a class="underlineHover" href="/">Return to hompage</a>
         </div>
       </div>

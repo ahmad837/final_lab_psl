@@ -80,9 +80,7 @@ body {
   font-size: 25px;
   color: white;
 }
-.main-menu {
-  border-left: 1px solid #495159;
-}
+
 
 .visually-hidden {
   color: #232f3e;
@@ -246,7 +244,6 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #0d0d0d;
   padding: 0px;
   width: 90%;
   max-width: 450px;
@@ -257,7 +254,6 @@ h2 {
 }
 
 #formFooter {
-  background-color: black;
   border-top: 1px solid #dce8f1;
   padding: 25px;
   text-align: center;
@@ -401,4 +397,8 @@ input[type="text"]:placeholder {
 }
 .fa-exclamation-circle {
   padding-right: 7px;
+}
+ 
+#main-nav{
+  background-image:  -webkit-linear-gradient(left,#e62e35,#f8af41,#fac014);
 }
